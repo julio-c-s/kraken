@@ -138,7 +138,7 @@ When('I click on the schedule post option', async function () {
 
 
 // Enter Tag Routes
-/*
+
 When('I enter tag section', async function () {
     let element = await this.driver.$('/html/body/div[2]/div/nav[1]/section/div[1]/ul[2]/li[4]/a');
     return await element.click();
@@ -203,10 +203,10 @@ When('I click the modal pop-up', async function () {
     let element = await this.driver.$('/html/body/div[4]/div[2]/div/div/div/div[2]/section');
     return await element.click();
 });
-*/
+
 
 // Enter Page Routes
-/*
+
 When('I enter page section', async function () {
     let element = await this.driver.$('/html/body/div[2]/div/nav[1]/section/div[1]/ul[2]/li[3]/a');
     return await element.click();
@@ -281,7 +281,7 @@ When('I click the modal pop-up', async function () {
     let element = await this.driver.$('/html/body/div[4]/div[2]/div/div/div/div[2]/section');
     return await element.click();
 });
-*/
+
 
 // Enter Modificaction account
 
@@ -449,7 +449,7 @@ When('I enter config ghost', async function () {
 });
 
 When('I enter my profile ghost', async function () {
-    let element = await this.driver.$('//*[@id="ember-basic-dropdown-content-ember24"]/ul/li[4]');
+    let element = await this.driver.$('/[@id="ember-basic-dropdown-content-ember24"]/ul/li[4]');
     return await element.click();
 });
 
