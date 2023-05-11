@@ -10,12 +10,12 @@ When('I enter email ghost {kraken-string}', async function (email) {
 });
 
 When('I enter password ghost {kraken-string}', async function (password) {
-    let element = await this.driver.$('#ember10');
+    let element = await this.driver.$('/html/body/div[2]/div/main/div/div/section/form/div[2]/span/input');
     return await element.setValue(password);
 });
 
 When('I click sign in', async function () {
-    let element = await this.driver.$('#ember12');
+    let element = await this.driver.$('/html/body/div[2]/div/main/div/div/section/form/button');
     return await element.click();
 })
 
