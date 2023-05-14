@@ -14,11 +14,9 @@ Scenario: Como primer usuario borro un post existente
     And I wait for 2 seconds
     And I select the first post
     And I wait for 2 seconds
-    And I click the settings post
-    And I wait for 4 seconds
+    And I click the settings span post
+    And I wait for 2 seconds
     And I click the delete post button
-    And I wait for 4 seconds
-    And I click the modal pop-up
-    And I wait for 4 seconds
+    And I wait for 2 seconds
     And I click the confirm delete post button
     And I wait for 20 seconds

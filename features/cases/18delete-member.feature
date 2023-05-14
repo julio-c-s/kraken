@@ -14,6 +14,8 @@ Scenario: Como primer usuario verifico que los enlaces funcionan correctamente
     And I wait for 2 seconds
     And I click the first memeber
     And I wait for 2 seconds
+    And I click the config member button
+    And I wait for 2 seconds
     And I click the delete member button
     And I wait for 2 seconds
     And I click the confirm delete member button

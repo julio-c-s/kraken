@@ -32,7 +32,7 @@ When('I enter sign out', async function () {
 // Enter Post Routes
 
 When('I enter post section', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/nav[1]/section/div[1]/ul[2]/li[2]/a[1]');
+    let element = await this.driver.$('/html/body/div[2]/div/nav[1]/div/section/div[1]/ul[2]/li[1]/a[1]');
     return await element.click();
 });
 
@@ -91,18 +91,23 @@ When('I click the settings post', async function () {
     return await element.click();
 });
 
+When('I click the settings span post', async function () {
+    let element = await this.driver.$('/html/body/div[2]/div/main/button/span');
+    return await element.click();
+});
+
 When('I click the delete post button', async function () {
-    let element = await this.driver.$('/html/body/div[4]/div[1]/div/div/div/div/div[1]/div/div[1]/div[2]/form/button/span');
+    let element = await this.driver.$('/html/body/div[2]/div/main/div/div/div/div/div[2]/form/button');
     return await element.click();
 });
 
 When('I click the confirm delete post button', async function () {
-    let element = await this.driver.$('/html/body/div[4]/div[2]/div/div/div/div[2]/section/div[2]/button[2]');
+    let element = await this.driver.$('/html/body/div[5]/div/div/div[2]/button[2]');
     return await element.click();
 });
 
-When('I click the modal pop-up', async function () {
-    let element = await this.driver.$('/html/body/div[4]/div[2]/div/div/div/div[2]/section');
+When('I click the post modal pop-up', async function () {
+    let element = await this.driver.$('/html/body/div[5]/div/div/div[2]/button[2]/span');
     return await element.click();
 });
 
@@ -208,7 +213,7 @@ When('I click the modal pop-up', async function () {
 // Enter Page Routes
 
 When('I enter page section', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/nav[1]/section/div[1]/ul[2]/li[3]/a');
+    let element = await this.driver.$('/html/body/div[2]/div/nav[1]/div/section/div[1]/ul[2]/li[2]/a');
     return await element.click();
 });
 
@@ -232,8 +237,8 @@ When('I enter second page content', async function () {
     return await element.click();
 });
 
-When('I click publish', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/main/section/header/section/div/div[1]');
+When('I click publish page', async function () {
+    let element = await this.driver.$('/html/body/div[2]/div/main/div/section/header/section/div[1]/div[1]');
     return await element.click();
 });
 
@@ -243,37 +248,37 @@ When('I confirm publish', async function () {
 });
 
 When('I go back to page', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/main/section/header/div/div[1]');
+    let element = await this.driver.$('/html/body/div[2]/div/main/div/section/header/div/div[1]/a');
     return await element.click();
 });
 
 When('I select the first page', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/main/section/section/ol/li[3]/a[1]');
+    let element = await this.driver.$('/html/body/div[2]/div/main/section/section/ol/li[2]/a[1]');
     return await element.click();
 });
 
 When("I clear page name", async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/main/section/div[1]/div[1]/textarea');
+    let element = await this.driver.$('/html/body/div[2]/div/main/div/section/div[1]/div[1]/textarea');
     return await element.setValue("");
 });
 
 When("I clear page description", async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/main/section/div[1]/div[1]/article/div[1]/div');
+    let element = await this.driver.$('/html/body/div[2]/div/main/div/section/div[1]/div[1]/article/div[1]/div/p[1]');
     return await element.setValue("");
 });
 
 When('I click the settings page', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/main/section/header/section/button');
+    let element = await this.driver.$('/html/body/div[2]/div/main/button');
     return await element.click();
 });
 
 When('I click the delete page button', async function () {
-    let element = await this.driver.$('/html/body/div[4]/div/div/div/div/div/div/div/div[1]/div[2]/form/button');
+    let element = await this.driver.$('/html/body/div[2]/div/main/div/div/div/div/div[2]/form/button');
     return await element.click();
 });
 
 When('I click the confirm delete page button', async function () {
-    let element = await this.driver.$('/html/body/div[4]/div[2]/div/div/div/div[2]/section/div[2]/button[2]');
+    let element = await this.driver.$('/html/body/div[5]/div/div/div[2]/button[2]');
     return await element.click();
 });
 
@@ -362,42 +367,47 @@ Then('I load an image', async function () {
 // Enter Member Routes
 
 When('I click the new member button', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/main/section/header/section/a');
+    let element = await this.driver.$('/html/body/div[2]/div/main/section/div/header/section/div[2]/a');
     return await element.click();
 });
 
 When('I click name field member', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/main/section/form/div/div/div[1]/div[1]/div[3]/input');
+    let element = await this.driver.$('/html/body/div[2]/div/main/section/div[2]/form/div/section/div/div[1]/div/div[1]/div[1]/input');
     return await element.setValue("");
 });
 
 When('I click email field member', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/main/section/form/div/div/div[1]/div[1]/div[4]/input');
+    let element = await this.driver.$('/html/body/div[2]/div/main/section/div[2]/form/div/section/div/div[1]/div/div[1]/div[2]/input');
     return await element.click();
 });
 
 When('I click save member button', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/main/section/header/section/button');
+    let element = await this.driver.$('/html/body/div[2]/div/main/section/div[1]/header/section/button');
     return await element.click();
 });
 
-When('I click save member button', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/main/section/header/section/button');
-    return await element.click();
-});
+// When('I click save member button', async function () {
+//     let element = await this.driver.$('/html/body/div[2]/div/main/section/header/section/button');
+//     return await element.click();
+// });
 
 When('I click the first memeber', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/main/section/section/section[2]/ol/li[2]/a[1]');
+    let element = await this.driver.$('/html/body/div[2]/div/main/section/section/div[1]/table/tbody/tr/a[1]');
+    return await element.click();
+});
+
+When('I click the config member button', async function () {
+    let element = await this.driver.$('/html/body/div[2]/div/main/section/div[1]/header/section/span/button');
     return await element.click();
 });
 
 When('I click the delete member button', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/main/section/div/button');
+    let element = await this.driver.$('/html/body/div[2]/div/main/section/div[1]/header/section/span/ul/li[2]/button');
     return await element.click();
 });
 
 When('I click the confirm delete member button', async function () {
-    let element = await this.driver.$('/html/body/div[4]/div/div/div/div/div[2]/section/div[2]/button[2]');
+    let element = await this.driver.$('/html/body/div[5]/div/div/div/div/div[2]/section/div[2]/button[2]');
     return await element.click();
 });
 
@@ -439,17 +449,17 @@ When('I enter General Config section', async function () {
 });
 
 When('I enter Member section', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/nav[1]/section/div[1]/ul[2]/li[5]/a');
+    let element = await this.driver.$('/html/body/div[2]/div/nav[1]/div/section/div[1]/ul[2]/li[4]/a');
     return await element.click();
 });
 
 When('I enter config ghost', async function () {
-    let element = await this.driver.$('#ember48');
+    let element = await this.driver.$('/html/body/div[2]/div/nav[1]/div/section/div[2]/div/div/div[1]/div[1]/div');
     return await element.click();
 });
 
 When('I enter my profile ghost', async function () {
-    let element = await this.driver.$('/[@id="ember-basic-dropdown-content-ember24"]/ul/li[4]');
+    let element = await this.driver.$('/html/body/div[1]/div/ul/li[4]/a');
     return await element.click();
 });
 
