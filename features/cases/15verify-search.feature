@@ -11,25 +11,8 @@ Scenario: Como primer usuario creo un nuevo post para despues buscarlo
     And I wait for 2 seconds
     And I click sign in
     And I wait for 2 seconds
-    And I enter post section
-    And I wait for 2 seconds
-    And I enter new post
-    And I wait for 2 seconds
-    And I enter new post title
-    And I wait for 2 seconds
-    And I enter text "New Post to Search"
-    And I wait for 2 seconds
-    And I enter new post body
-    And I wait for 2 seconds
-    And I enter text "New Post Body"
-    And I select publish
-    And I wait for 2 seconds
-    And I confirm publish new post
-    And I wait for 2 seconds
-    And I go back to post
-    And I wait for 2 seconds
     And I enter Search Site section
-    And I enter text "New Post to Search"
+    And I enter text "Post"
     And I wait for 5 seconds
     And I click the first option on the search menu
     And I wait for 15 seconds

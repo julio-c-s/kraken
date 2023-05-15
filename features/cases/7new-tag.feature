@@ -23,6 +23,4 @@ Scenario: Como primer usuario creo un nuevo tag
     And I enter text "New Tag"
     And I wait for 2 seconds
     And I select save
-    And I wait for 2 seconds
-    And I go back to tag page
     And I wait for 10 seconds

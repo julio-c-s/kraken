@@ -22,7 +22,7 @@ Scenario: Como primer usuario creo una nueva pagina
     And I wait for 2 seconds
     And I enter text "First page Body"
     And I wait for 2 seconds
-    And I click publish
+    And I click publish page
     And I wait for 2 seconds
     And I confirm publish
     And I wait for 2 seconds

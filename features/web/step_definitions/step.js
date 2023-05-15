@@ -37,22 +37,27 @@ When('I enter post section', async function () {
 });
 
 When('I enter new post', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/main/section/header/section/a/span');
+    let element = await this.driver.$('/html/body/div[2]/div/main/section/div/header/section/a');
     return await element.click();
 });
 
 When('I enter new post title', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/main/section/div[1]/div[1]/textarea');
+    let element = await this.driver.$('/html/body/div[2]/div/main/div/section/div[1]/div[1]/textarea');
     return await element.click();
 });
 
 When('I enter new post body', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/main/section/div[1]/div[1]/article/div[1]/div');
+    let element = await this.driver.$('/html/body/div[2]/div/main/div/section/div[1]/div[1]/article/div[1]/div');
+    return await element.click();
+});
+
+When('I select post setings publish', async function () {
+    let element = await this.driver.$('/html/body/div[2]/div/main/button');
     return await element.click();
 });
 
 When('I select publish', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/main/section/header/section/div/div[1]');
+    let element = await this.driver.$('/html/body/div[2]/div/main/div/section/header/section/div[2]/div[1]');
     return await element.click();
 });
 
@@ -61,8 +66,13 @@ When('I confirm publish new post', async function () {
     return await element.click();
 });
 
+When('I confirm modal confirm publish new post', async function () {
+    let element = await this.driver.$('/html/body/div[5]/div/div/div[2]/button[2]');
+    return await element.click();
+});
+
 When('I go back to post', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/main/section/header/div/div[1]/a');
+    let element = await this.driver.$('/html/body/div[2]/div/main/div/section/header/div/div[1]/a');
     return await element.click();
 });
 
@@ -72,12 +82,12 @@ When('I select the first post', async function () {
 });
 
 When("I clear post title", async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/main/section/div[1]/div[1]/textarea');
+    let element = await this.driver.$('/html/body/div[2]/div/main/div/section/div[1]/div[1]/textarea');
     return await element.setValue("");
 });
 
 When("I clear post body", async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/main/section/div[1]/div[1]/article/div[1]/div/p');
+    let element = await this.driver.$('/html/body/div[2]/div/main/div/section/div[1]/div[1]/article/div[1]/div/p');
     return await element.setValue("");
 });
 
@@ -145,32 +155,32 @@ When('I click on the schedule post option', async function () {
 // Enter Tag Routes
 
 When('I enter tag section', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/nav[1]/section/div[1]/ul[2]/li[4]/a');
+    let element = await this.driver.$('/html/body/div[2]/div/nav[1]/div/section/div[1]/ul[2]/li[3]/a');
     return await element.click();
 });
 
 When('I enter new tag', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/main/section/header/section/a/span');
+    let element = await this.driver.$('/html/body/div[2]/div/main/section/div/header/section/a');
     return await element.click();
 });
 
 When('I enter new tag name', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/main/section/form/div/div[1]/div[1]/div[1]/div[1]/input');
+    let element = await this.driver.$('/html/body/div[2]/div/main/section/form/div[2]/div/section/div/div[1]/div[1]/div[1]/input');
     return await element.click();
 });
 
 When('I enter new tag slug', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/main/section/form/div/div[1]/div[1]/div[2]/input');
+    let element = await this.driver.$('/html/body/div[2]/div/main/section/form/div[2]/div/section/div/div[1]/div[2]/input');
     return await element.click();
 });
 
 When('I enter new tag description', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/main/section/form/div/div[1]/div[1]/div[3]/textarea');
+    let element = await this.driver.$('/html/body/div[2]/div/main/section/form/div[2]/div/section/div/div[1]/div[3]/textarea');
     return await element.click();
 });
 
 When('I select save', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/main/section/form/header/section/button');
+    let element = await this.driver.$('/html/body/div[2]/div/main/section/form/div[1]/header/section/button');
     return await element.click();
 });
 
@@ -185,22 +195,27 @@ When('I select the first tag', async function () {
 });
 
 When("I clear tag name", async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/main/section/form/div/div[1]/div[1]/div[1]/div[1]/input');
+    let element = await this.driver.$('/html/body/div[2]/div/main/section/form/div[2]/div/section/div/div[1]/div[1]/div[1]/input');
     return await element.setValue("");
 });
 
 When("I clear tag description", async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/main/section/form/div/div[1]/div[1]/div[3]/textarea');
+    let element = await this.driver.$('/html/body/div[2]/div/main/section/form/div[2]/div/section/div/div[1]/div[3]/textarea');
     return await element.setValue("");
 });
 
 When('I click the delete tag button', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/main/section/button');
+    let element = await this.driver.$('/html/body/div[2]/div/main/section/div/button');
+    return await element.click();
+});
+
+When('I click the confirm section delete tag button', async function () {
+    let element = await this.driver.$('/html/body/div[6]/div/div/div/div/div[2]/section');
     return await element.click();
 });
 
 When('I click the confirm delete tag button', async function () {
-    let element = await this.driver.$('/html/body/div[4]/div/div/div/div/div[2]/section/div[2]/button[2]');
+    let element = await this.driver.$('/html/body/div[6]/div/div/div/div/div[2]/section/div[2]/button[2]');
     return await element.click();
 });
 
@@ -218,17 +233,17 @@ When('I enter page section', async function () {
 });
 
 When('I enter new page', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/main/section/header/section/a');
+    let element = await this.driver.$('/html/body/div[2]/div/main/section/div/header/section/a');
     return await element.click();
 });
 
 When('I enter new page title', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/main/section/div[1]/div[1]/textarea');
+    let element = await this.driver.$('/html/body/div[2]/div/main/div/section/div[1]/div[1]/textarea');
     return await element.click();
 });
 
 When('I enter first page content', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/main/section/div[1]/div[1]/article/div[1]/div');
+    let element = await this.driver.$('/html/body/div[2]/div/main/div/section/div[1]/div[1]/article/div[1]/div');
     return await element.click();
 });
 
@@ -238,7 +253,7 @@ When('I enter second page content', async function () {
 });
 
 When('I click publish page', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/main/div/section/header/section/div[1]/div[1]');
+    let element = await this.driver.$('/html/body/div[2]/div/main/div/section/header/section/div[2]/div[1]');
     return await element.click();
 });
 
@@ -291,17 +306,17 @@ When('I click the modal pop-up', async function () {
 // Enter Modificaction account
 
 When('I click the expand title', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/main/section/div/section/div[2]/div[1]/div[2]/button');
+    let element = await this.driver.$('/html/body/div[2]/div/main/section/div[2]/section/div[1]/div[1]/button');
     return await element.click();
 });
 
 When('I click the title of the site field', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/main/section/div/section/div[2]/div[1]/div[1]/div[3]/div/div/div[1]/input');
+    let element = await this.driver.$('/html/body/div[2]/div/main/section/div[2]/section/div[1]/div[2]/div/div/div/div[1]/input');
     return await element.setValue("");
 });
 
 When('I click the welcome of the site field', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/main/section/div/section/div[2]/div[1]/div[1]/div[3]/div/div/div[2]/input');
+    let element = await this.driver.$('/html/body/div[2]/div/main/section/div[2]/section/div[1]/div[2]/div/div/div/div[2]/input');
     return await element.setValue("");
 });
 
@@ -311,7 +326,7 @@ When('I click the save settings general config', async function () {
 });
 
 When('I click the first option on the search menu', async function () {
-    let element = await this.driver.$('/html/body/div[4]/div/div/div/div/div[2]/section/div/div[1]/div/div[2]/div/ul/li/ul/li[1]');
+    let element = await this.driver.$('/html/body/div[5]/div/div/div/div[1]/div/div[2]/div/ul/li[1]/ul/li[1]');
     return await element.click();
 });
 
@@ -414,37 +429,42 @@ When('I click the confirm delete member button', async function () {
 // Enter config Routes
 
 When('I enter View Site section', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/nav[1]/section/div[1]/ul[1]/li/span/a');
+    let element = await this.driver.$('/html/body/div[2]/div/nav[1]/div/section/div[1]/ul[1]/li[2]/span/a');
     return await element.click();
 });
 
 When('I enter Design section', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/nav[1]/section/div[1]/ul[3]/li[3]/a');
+    let element = await this.driver.$('/html/body/div[2]/div/main/section/section/div[2]/a[2]');
     return await element.click();
 });
 
 When('I enter Code Injection section', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/nav[1]/section/div[1]/ul[3]/li[4]/a');
+    let element = await this.driver.$('/html/body/div[2]/div/main/section/section/div[6]/a[2]');
     return await element.click();
 });
 
 When('I enter Integration section', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/nav[1]/section/div[1]/ul[3]/li[5]/a');
+    let element = await this.driver.$('/html/body/div[2]/div/main/section/section/div[6]/a[1]');
     return await element.click();
 });
 
 When('I enter Labs section', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/nav[1]/section/div[1]/ul[3]/li[6]/a');
+    let element = await this.driver.$('/html/body/div[2]/div/main/section/section/div[6]/a[3]');
     return await element.click();
 });
 
 When('I enter Search Site section', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/nav[1]/header/div[2]');
+    let element = await this.driver.$('/html/body/div[2]/div/nav[1]/div/header/div[2]/button');
+    return await element.click();
+});
+
+When('I enter General Config section section', async function () {
+    let element = await this.driver.$('/html/body/div[2]/div/nav[1]/div/section/div[2]/div/div/div[2]/a');
     return await element.click();
 });
 
 When('I enter General Config section', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/nav[1]/section/div[1]/ul[3]/li[2]/a');
+    let element = await this.driver.$('/html/body/div[2]/div/nav[1]/div/section/div[2]/div/div/div[2]/a');
     return await element.click();
 });
 

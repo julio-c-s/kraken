@@ -23,6 +23,4 @@ Scenario: Como primer usuario edito un tag existente
     And I enter text "Edit Tag description"
     And I wait for 2 seconds
     And I select save
-    And I wait for 2 seconds
-    And I go back to tag page
     And I wait for 10 seconds

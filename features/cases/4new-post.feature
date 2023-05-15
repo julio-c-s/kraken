@@ -21,9 +21,12 @@ Scenario: Como primer usuario creo un nuevo post
     And I enter new post body
     And I wait for 2 seconds
     And I enter text "New Post Body"
+    And I wait for 2 seconds
     And I select publish
     And I wait for 2 seconds
     And I confirm publish new post
+    And I wait for 2 seconds
+    And I confirm modal confirm publish new post
     And I wait for 2 seconds
     And I go back to post
     And I wait for 15 seconds

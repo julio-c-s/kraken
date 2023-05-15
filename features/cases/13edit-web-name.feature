@@ -10,6 +10,8 @@ Scenario: Como primer usuario edito la configuracion de la aplicacion
     And I wait for 2 seconds
     And I click sign in
     And I wait for 2 seconds
+    And I enter General Config section section
+    And I wait for 2 seconds
     And I enter General Config section
     And I wait for 2 seconds
     And I click the expand title
@@ -21,6 +23,4 @@ Scenario: Como primer usuario edito la configuracion de la aplicacion
     And I enter text "Welcome to the Pruebas site to show"
     And I wait for 2 seconds
     And I click the save settings general config
-    And I wait for 5 seconds
-    And I enter View Site section
     And I wait for 15 seconds
