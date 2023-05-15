@@ -53,8 +53,8 @@ And move to the repo.
 
 ## Test Execution
 
-1. In th folder `features/cases` are located all the cases enumerated. The test have to be executed in order beacuse some cases will be executed succefully when previous test were executed.
-2. in the folder `features` is located the file  `1login.feature`, this is the first feature. When this test ends the file have to be moved to the cases folder and the file `2login-fail.feature` have to be moved to the `features` folder.
+1. In th folder `features/cases v4` are located all the cases enumerated. The test have to be executed in order beacuse some cases will be executed succefully when previous test were executed.
+2. This test are related with the ghost version implemented for the 6th week.
+2. in the folder `features` is located the file  `4new-post.feature`, this is the first feature. When this test ends the file have to be moved to the cases v4 folder and the file `5edit-post.feature` have to be moved to the `features` folder.
 3. This process have to be done in order with the whole bank of test.
-
 
