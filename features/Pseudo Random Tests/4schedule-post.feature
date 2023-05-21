@@ -25,7 +25,7 @@ Scenario: Como primer usuario verifico que los publicaciones queden programadas
     And I wait for 3 seconds
     And I click on the schedule post option
     And I wait for 3 seconds
-    And I click on the publish date option this date '1010-12-01'
+    And I click on the publish date option this date '10000-12-01'
     And I wait for 3 seconds
     And I click on the publish hour option
     And I enter text "10:00"

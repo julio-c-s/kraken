@@ -56,6 +56,11 @@ When('I select publish', async function () {
     return await element.click();
 });
 
+When('I select publish post button', async function () {
+    let element = await this.driver.$('/html/body/div[2]/div/main/section/header/section/div/div[1]');
+    return await element.click();
+});
+
 When('I confirm publish new post', async function () {
     let element = await this.driver.$('/html/body/div[1]/div/footer/button[2]');
     return await element.click();
@@ -117,19 +122,16 @@ When('I click the first of the option , image option', async function () {
 });
 
 When('I click on the publish date option this date {string}', async function (string) {
-    let element = await this.driver.$('/html/body/div[1]/div/div/section/div/div[2]/div[2]/div[2]/div[1]/div/div[1]/div');
+    let element = await this.driver.$('/html/body/div[1]/div/div/section/div/div[2]/div[2]/div[2]/div[1]/div/div[1]/div/input');
     element.click();
     sleep(2)
+    element.setValue('');
+    // element.setValue(string);
     // element = await this.driver.$('/html/body/div[1]/div/div/section/div/div[2]/div[2]/div[2]/div[1]/div/div[2]/div/nav/button[2]');
     // element.click();
-    element = await this.driver.$('/html/body/div[1]/div/div/div/section/div[2]/div[2]/div[2]/div[1]/div/div[2]/div/nav/button[2]');
-    sleep(5)
-    for (let index = 0; index < 8000; index++) {
-        element.click();
-    }
-    // element = await this.driver.$('/html/body/div[1]/div/div/section/div/div[2]/div[2]/div[2]/div[1]/div/div[2]/div/div/div[2]/div[2]/button[2]');
-    // element.click();
-    element.setValue('');
+    // element = await this.driver.$('/html/body/div[1]/div/div/div/section/div[2]/div[2]/div[2]/div[1]/div/div[2]/div/nav/button[2]');
+    // sleep(5)
+    // element.setValue('');
     return await element.setValue(string);
 });
 
@@ -317,6 +319,21 @@ When('I click the expand title', async function () {
     return await element.click();
 });
 
+When('I click the expand site timezone', async function () {
+    let element = await this.driver.$('/html/body/div[2]/div/main/section/div/section/div[2]/div[2]/div[2]/button');
+    return await element.click();
+});
+
+When('I click the dropdown timezones section', async function () {
+    let element = await this.driver.$('/html/body/div[2]/div/main/section/div/section/div[2]/div[2]/div[1]/div[3]/div/div/div/span/select');
+    return await element.click();
+});
+
+When('I click the item {kraken-string} of the timezone list', async function (position) {
+    let element = await this.driver.$(`/html/body/div[2]/div/main/section/div/section/div[2]/div[2]/div[1]/div[3]/div/div/div/span/select/option[${position}]`);
+    return await element.click();
+});
+
 When('I click the title of the site field', async function () {
     let element = await this.driver.$('/html/body/div[2]/div/main/section/div/section/div[2]/div[1]/div[1]/div[3]/div/div/div[1]/input');
     return await element.setValue("");
@@ -367,6 +384,11 @@ Then('I click to save the new password', async function () {
     return await element.click();
 });
 
+Then('I click to save the general button', async function () {
+    let element = await this.driver.$('/html/body/div[2]/div/main/section/header/section/button');
+    return await element.click();
+});
+
 Then('I load an image', async function () {
     let element = await this.driver.$('/html/body/div[2]/div/main/section/section/div/form[2]/div/fieldset/div[4]/button');
     let url = 'https://img.freepik.com/foto-gratis/camisetas-blancas-espacio-copia-sobre-fondo-gris_53876-104920.jpg?w=1380&t=st=1683429492~exp=1683430092~hmac=b2accc865950205473f883d7d5c4dbd8076329d718a58963b337c226c5997d50'
@@ -400,11 +422,6 @@ When('I click name field member', async function () {
 
 When('I click email field member', async function () {
     let element = await this.driver.$('/html/body/div[2]/div/main/section/form/div/div/div[1]/div[1]/div[4]/input');
-    return await element.click();
-});
-
-When('I click save member button', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/main/section/header/section/button');
     return await element.click();
 });
 
@@ -450,6 +467,11 @@ When('I click label name on members', async function () {
 
 When('I click save  label name on members', async function () {
     let element = await this.driver.$('/html/body/div[4]/div/div/div/div/div[2]/section/div[2]/button[2]');
+    return await element.click();
+});
+
+When('I click description name on members', async function () {
+    let element = await this.driver.$('/html/body/div[2]/div/main/section/form/div/div/div[2]/div/div[2]/textarea');
     return await element.click();
 });
 
@@ -522,6 +544,11 @@ When('I enter config ghost', async function () {
     return await element.click();
 });
 
+When('I enter Labs ghost', async function () {
+    let element = await this.driver.$('/html/body/div[2]/div/nav[1]/section/div[1]/ul[3]/li[6]/a');
+    return await element.click();
+});
+
 When('I enter my profile ghost', async function () {
     let element = await this.driver.$('/[@id="ember-basic-dropdown-content-ember24"]/ul/li[4]');
     return await element.click();
@@ -537,10 +564,9 @@ When('I enter my code injection ghost', async function () {
     return await element.click();
 });
 
-When('I enter my code injection ghost with limit', async function () {
-    let element = await this.driver.$('/html/body/div[2]/div/main/section/section/form/fieldset/div/div[1]/div/div/div[6]');
-    element.click()
-    return await element.setValue("abcderiopmabcde".repeat(150));
+When('I enter my code injection ghost footer', async function () {
+    let element = await this.driver.$('/html/body/div[2]/div/main/section/section/form/fieldset/div/div[2]/div/div/div[6]/div[1]/div/div/div/div[5]/div/pre');
+    return await element.click();
 });
 
 When('I enter my code injection ghost with limit', async function () {
@@ -548,6 +574,12 @@ When('I enter my code injection ghost with limit', async function () {
     element.click()
     return await element.setValue("abcderiopmabcde".repeat(150));
 });
+
+// When('I enter my code injection ghost with limit', async function () {
+//     let element = await this.driver.$('/html/body/div[2]/div/main/section/section/form/fieldset/div/div[1]/div/div/div[6]');
+//     element.click()
+//     return await element.setValue("abcderiopmabcde".repeat(150));
+// });
 
 When('I select the route item for the route', async function () {
     let element = await this.driver.$('/html/body/div[2]/div/main/section/section/div[2]/form/div[2]/div/span[2]/input');
@@ -561,6 +593,31 @@ When('I select the name item for the route', async function () {
 
 When('I click the save design button', async function () {
     let element = await this.driver.$('/html/body/div[2]/div/main/section/header/section/button');
+    return await element.click();
+});
+
+When('I enter members labs section', async function () {
+    let element = await this.driver.$('/html/body/div[2]/div/main/section/section/a');
+    return await element.click();
+});
+
+When('I click the customize portal section', async function () {
+    let element = await this.driver.$('/html/body/div[2]/div/main/section/section/div[2]/div/div/div/div/section[1]/div/div[2]/button');
+    return await element.click();
+});
+
+When('I click the customize color section', async function () {
+    let element = await this.driver.$('/html/body/div[4]/div/div/div/div/div[2]/section/div/div/div[1]/div/fieldset/div[2]/div[1]/div/div/div/div/input');
+    return await element.click();
+});
+
+When('I click on the full name field customization', async function () {
+    let element = await this.driver.$('/html/body/div[2]/div/main/section/section/div/form[1]/div/fieldset/div[1]/input');
+    return await element.click();
+});
+
+When('I click on the switch color theme', async function () {
+    let element = await this.driver.$('/html/body/div[2]/div/nav[1]/section/div[1]/ul[3]/li[6]/button');
     return await element.click();
 });
 
