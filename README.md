@@ -26,6 +26,8 @@ This project demonstrates the use of Kraken to E2E testing on the Ghost CMS appl
 
 `git clone https://github.com/julio-c-s/kraken.git`
 
+For the week 7 the branch to download have to be the  `ghostv3`, by dedfault the branch is this However this is a recall to use this branch.
+
 And move to the repo.
 
 `cd kraken`
@@ -47,14 +49,19 @@ And move to the repo.
   "GHOSTNEWPASSWORD": <GHOSTNEWPASSWORD>
 }
 ```
-4. Run the test:
-
-`npx kraken-node run`
 
 ## Test Execution
 
-1. In th folder `features/cases` are located all the cases enumerated. The test have to be executed in order beacuse some cases will be executed succefully when previous test were executed.
-2. in the folder `features` is located the file  `1login.feature`, this is the first feature. When this test ends the file have to be moved to the cases folder and the file `2login-fail.feature` have to be moved to the `features` folder.
-3. This process have to be done in order with the whole bank of test.
+1. In th folder `features` are located all the cases. In the folder there are three folders with the tests divided by the strategies used.
 
+  a. A priori Tests: This folder contains 29 tests, where each test has its own pool of information for execution.
+  
+  b. Random Tests: This folder contains 20 tests where each test contains an instance of kraken that generate the information type to test the correctly execution of the test.
+  
+  c. Pseudo Random Tests: This folder contains 11 tests that cover the field limits and their functionality. These tests aim to validate the correct functionality of the system.
+  
+2. Each folder has their tests enumerated because this is the order where it has to be executed. To execute a test it has to be moved from the folder allocateed to the folder `features` and run
+ `npm install kraken-node`.
+3. When the test had finished the feature has to be moved back to the origin folder. And go on with the next feature.
 
+![kraken-Visual-Studio-Code-2023-05-21-20-15-56](https://github.com/julio-c-s/kraken/assets/124327900/0a737816-7423-41dc-9c71-8a9f693b245f)
