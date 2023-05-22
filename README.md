@@ -17,7 +17,7 @@ This project demonstrates the use of Kraken to E2E testing on the Ghost CMS appl
 
 - Ghost version :  3.41.1.
 - Ghost Cli : 1.24.0.
-- Node Version : 14.18.0
+- Node Version : 12.22.1
 - Android Studio.
 
 ## Installation
@@ -54,11 +54,11 @@ And move to the repo.
 
 1. In th folder `features` are located all the cases. In the folder there are three folders with the tests divided by the strategies used.
 
-  a. A priori Tests: This folder contains 29 tests, where each test has its own pool of information for execution.
+  a. A priori Tests: This folder contains 29 tests, where each test has its own pool of information for execution. The a-priori data pool is used to address specific cases, ensuring that the system functions correctly in known and expected scenarios.
   
-  b. Random Tests: This folder contains 20 tests where each test contains an instance of kraken that generate the information type to test the correctly execution of the test.
+  b. Random Tests: This folder contains 20 tests where each test contains an instance of kraken that generate the information type to test the correctly execution of the test.  These tests aim to validate the correct functionality of the system. The random scenario strategy is used to create completely random test scenarios, exploring unconventional or unexpected situations to evaluate the system's robustness.
   
-  c. Pseudo Random Tests: This folder contains 11 tests that cover the field limits and their functionality. These tests aim to validate the correct functionality of the system.
+  c. Pseudo Random Tests: This folder contains 11 tests that cover the field limits and their functionality.The pseudo-random tests are utilized to evaluate edge conditions by assessing scenarios at the limits and limit + 1. These tests aim to validate how the system behaves in critical situations that involve boundary values. By deliberately testing scenarios at the upper and lower limits of input ranges or parameter values, the tests help identify any issues or unexpected behaviors that may arise.
   
 2. Each folder has their tests enumerated because this is the order where it has to be executed. To execute a test it has to be moved from the folder allocateed to the folder `features` and run
  `npm install kraken-node`.
