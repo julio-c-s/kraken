@@ -13,12 +13,16 @@ This project demonstrates the use of Kraken to E2E testing on the Ghost CMS appl
 - Diego Correa.
 - Julio Cardenas.
 
-## Prerequisites
+## Prerequisites for Ghost
 
 - Ghost version :  3.41.1.
 - Ghost Cli : 1.24.0.
-- Node Version : 14.18.0
+- Node Version : v12.22.1
 - Android Studio.
+
+## Prerequisites for Kreaken
+
+- Node Version : v14.18.0
 
 ## Installation
 
